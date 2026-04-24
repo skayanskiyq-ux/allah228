@@ -1,3 +1,10 @@
+import os
+
+cookies = os.getenv("YT_COOKIES")
+
+if cookies:
+    with open("cookies.txt", "w", encoding="utf-8") as f:
+        f.write(cookies)
 from flask import Flask, request, jsonify
 from yt_dlp import YoutubeDL
 import os
